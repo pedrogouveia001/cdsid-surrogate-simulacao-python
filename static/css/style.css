@@ -1,0 +1,744 @@
+/* SPEAR Simulation CSS Design System - Light and Dark Theme Support */
+:root {
+    --bg-main: #f8fafc; /* Slate 50 */
+    --bg-panel: #ffffff;
+    --text-color: #0f172a; /* Slate 900 */
+    --text-muted: #64748b; /* Slate 500 */
+    --border-color: #cbd5e1; /* Slate 300 */
+    --border-light: #e2e8f0; /* Slate 200 */
+    --delphi-blue: #1e3a8a; /* Deep primary blue */
+    --delphi-light-blue: #2563eb; /* Accent blue */
+    --delphi-active: #3b82f6; /* Focus blue */
+    --warning-red: #ef4444; /* Alert red */
+    --success-green: #10b981; /* Success green */
+    --border-radius: 8px;
+    --transition: all 0.2s ease-in-out;
+}
+
+body.dark-theme {
+    --bg-main: #0b0f19; /* Dark slate */
+    --bg-panel: #161e2e; /* Dark slate card */
+    --text-color: #f3f4f6; /* Gray 100 */
+    --text-muted: #9ca3af; /* Gray 400 */
+    --border-color: #374151; /* Gray 700 */
+    --border-light: #1f2937; /* Gray 800 */
+    --delphi-blue: #3b82f6; /* Accent blue in dark mode */
+    --delphi-light-blue: #60a5fa; /* Focus blue in dark mode */
+    --delphi-active: #93c5fd;
+    --border-light-rgb: 31, 41, 55;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background-color: var(--bg-main);
+    color: var(--text-color);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Header */
+.app-header {
+    background-color: #0f172a;
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 24px;
+    height: 56px;
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+    z-index: 10;
+}
+
+.header-logo .logo-text {
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    color: #ffffff;
+}
+
+.header-controls {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.header-control-btn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    padding: 4px;
+    border-radius: 4px;
+    transition: var(--transition);
+}
+
+.header-control-btn:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.header-version {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 12px;
+    font-weight: bold;
+    color: #94a3b8;
+}
+
+/* Sub-Navigation */
+.sub-nav {
+    background-color: var(--bg-panel);
+    border-bottom: 1px solid var(--border-light);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 24px;
+    height: 44px;
+    font-size: 13px;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.back-link {
+    color: var(--delphi-light-blue);
+    text-decoration: none;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.back-link:hover {
+    color: var(--delphi-blue);
+}
+
+.user-info {
+    color: var(--text-muted);
+    margin-right: 15px;
+    font-weight: 500;
+}
+
+.logout-link {
+    color: var(--warning-red);
+    text-decoration: none;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.logout-link:hover {
+    text-decoration: underline;
+}
+
+/* Main Container */
+.container {
+    flex: 1;
+    max-width: 1200px;
+    width: 100%;
+    margin: 24px auto;
+    padding: 0 24px;
+}
+
+/* Forms and Inputs */
+.input-delphi {
+    background-color: var(--bg-panel);
+    border: 1px solid var(--border-color);
+    color: var(--text-color);
+    padding: 8px 12px;
+    font-family: inherit;
+    font-size: 14px;
+    border-radius: var(--border-radius);
+    width: 100%;
+    outline: none;
+    transition: var(--transition);
+}
+
+.input-delphi:focus {
+    border-color: var(--delphi-active);
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+}
+
+.select-delphi {
+    background-color: var(--bg-panel);
+    border: 1px solid var(--border-color);
+    color: var(--text-color);
+    padding: 8px 12px;
+    font-family: inherit;
+    font-size: 14px;
+    border-radius: var(--border-radius);
+    width: 100%;
+    outline: none;
+    transition: var(--transition);
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23475569' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 16px;
+    padding-right: 40px;
+}
+
+body.dark-theme .select-delphi {
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%239ca3af' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+}
+
+.select-delphi:focus {
+    border-color: var(--delphi-active);
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+}
+
+/* Checkboxes */
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding-left: 28px;
+    cursor: pointer;
+    font-size: 14px;
+    user-select: none;
+    font-weight: 500;
+}
+
+.checkbox-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 18px;
+    width: 18px;
+    background-color: var(--bg-panel);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    transition: var(--transition);
+}
+
+.checkbox-container:hover input ~ .checkmark {
+    border-color: var(--delphi-active);
+}
+
+.checkbox-container input:checked ~ .checkmark {
+    background-color: var(--delphi-light-blue);
+    border-color: var(--delphi-light-blue);
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.checkbox-container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+.checkbox-container .checkmark:after {
+    left: 6px;
+    top: 2px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+/* Buttons */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 600;
+    color: #ffffff;
+    background-color: var(--delphi-light-blue);
+    border: 1px solid var(--delphi-light-blue);
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    text-decoration: none;
+    outline: none;
+    transition: var(--transition);
+}
+
+.btn:hover {
+    background-color: var(--delphi-blue);
+    border-color: var(--delphi-blue);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.btn-full-width {
+    width: 100%;
+}
+
+.btn-delphi-action {
+    background-color: var(--bg-panel);
+    border: 1px solid var(--border-color);
+    color: var(--text-color);
+}
+
+.btn-delphi-action:hover {
+    background-color: var(--border-light);
+    border-color: var(--text-muted);
+}
+
+/* Welcome Page */
+.welcome-container {
+    max-width: 520px;
+    margin: 60px auto;
+    text-align: center;
+    background-color: var(--bg-panel);
+    border: 1px solid var(--border-light);
+    border-radius: 12px;
+    padding: 40px 30px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+}
+
+.welcome-title {
+    font-family: 'Georgia', serif;
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+.welcome-desc {
+    color: var(--text-muted);
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 32px;
+}
+
+.welcome-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.btn-welcome-action {
+    width: 100%;
+    padding: 12px;
+}
+
+.btn-welcome-action.secondary {
+    background-color: transparent;
+    border: 1px solid var(--border-color);
+    color: var(--text-color);
+}
+
+.btn-welcome-action.secondary:hover {
+    background-color: var(--border-light);
+}
+
+/* Auth Containers */
+.auth-container {
+    max-width: 420px;
+    margin: 50px auto;
+    background-color: var(--bg-panel);
+    border: 1px solid var(--border-light);
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+}
+
+.auth-title {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border-light);
+}
+
+.auth-error {
+    background-color: #fee2e2;
+    border: 1px solid #fecaca;
+    color: var(--warning-red);
+    font-size: 13px;
+    padding: 10px;
+    border-radius: var(--border-radius);
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+body.dark-theme .auth-error {
+    background-color: #451a03;
+    border-color: #78350f;
+    color: #fca5a5;
+}
+
+.auth-form .form-group {
+    margin-bottom: 16px;
+}
+
+.auth-footer {
+    text-align: center;
+    font-size: 13px;
+    color: var(--text-muted);
+    margin-top: 20px;
+}
+
+.auth-footer a {
+    color: var(--delphi-light-blue);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.auth-footer a:hover {
+    text-decoration: underline;
+}
+
+/* Options Selector */
+.options-container {
+    max-width: 720px;
+    margin: 40px auto;
+    text-align: center;
+}
+
+.options-header {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.options-row {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.option-card {
+    flex: 1;
+    min-width: 280px;
+    background-color: var(--bg-panel);
+    border: 1px solid var(--border-light);
+    border-radius: 12px;
+    padding: 35px 25px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: var(--transition);
+}
+
+.option-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.08);
+}
+
+.option-card svg {
+    stroke: var(--delphi-light-blue);
+    margin-bottom: 20px;
+}
+
+.btn-delphi-option {
+    width: 100%;
+}
+
+/* Continue Simulation */
+.continue-container {
+    max-width: 620px;
+    margin: 40px auto;
+}
+
+.continue-card {
+    background-color: var(--bg-panel);
+    border: 1px solid var(--border-light);
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+}
+
+.continue-title {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 24px;
+    border-bottom: 1px solid var(--border-light);
+    padding-bottom: 12px;
+}
+
+/* Setup Page */
+.setup-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.form-group label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: var(--text-color);
+}
+
+.form-hint {
+    font-size: 11px;
+    color: var(--text-muted);
+    margin-top: 4px;
+}
+
+/* Results Layout & Tabs */
+.results-card {
+    background-color: var(--bg-panel);
+    border: 1px solid var(--border-light);
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    margin-bottom: 24px;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.results-header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--border-light);
+    padding-bottom: 16px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.results-title {
+    font-family: 'Georgia', serif;
+    font-size: 22px;
+    font-weight: 800;
+}
+
+.tabs-container {
+    border-bottom: 1px solid var(--border-light);
+    margin-bottom: 20px;
+    overflow-x: auto;
+}
+
+.tabs-list {
+    display: flex;
+    list-style: none;
+    gap: 12px;
+    margin-bottom: -1px;
+}
+
+.tab-link {
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid transparent;
+    padding: 10px 16px;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-muted);
+    cursor: pointer;
+    transition: var(--transition);
+    white-space: nowrap;
+}
+
+.tab-link:hover {
+    color: var(--text-color);
+    border-bottom-color: var(--border-color);
+}
+
+.tab-link.active {
+    color: var(--delphi-light-blue);
+    border-bottom-color: var(--delphi-light-blue);
+}
+
+.tab-panel {
+    display: none;
+}
+
+.tab-panel.active {
+    display: block;
+}
+
+/* Sub-tabs toggles */
+.subtab-link {
+    background: var(--bg-main);
+    border: 1px solid var(--border-light);
+    padding: 8px 16px;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--text-muted);
+    border-radius: 20px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.subtab-link:hover {
+    color: var(--text-color);
+    background-color: var(--border-light);
+}
+
+.subtab-link.active {
+    color: #ffffff;
+    background-color: var(--delphi-light-blue);
+    border-color: var(--delphi-light-blue);
+}
+
+.results-layout {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+.results-left, .results-right {
+    flex: 1;
+    min-width: 300px;
+}
+
+.chart-wrapper {
+    position: relative;
+    width: 100%;
+    background-color: var(--bg-panel);
+    border-radius: var(--border-radius);
+    padding: 10px;
+}
+
+/* Results Tables */
+.results-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.results-table th, .results-table td {
+    padding: 10px 12px;
+    font-size: 13px;
+    border-bottom: 1px solid var(--border-light);
+    text-align: left;
+}
+
+.results-table th {
+    background-color: var(--bg-main);
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.results-table td {
+    color: var(--text-color);
+}
+
+/* Delphi grids styles for Matrix Consequence view */
+.delphi-grid {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.delphi-grid th {
+    background-color: var(--bg-main);
+    color: var(--text-color);
+    font-weight: 600;
+    border: 1px solid var(--border-light);
+    padding: 10px;
+    font-size: 12px;
+}
+
+.delphi-grid td {
+    border: 1px solid var(--border-light);
+    padding: 8px;
+    font-size: 12px;
+    text-align: center;
+    background-color: var(--bg-panel);
+    color: var(--text-color);
+}
+
+.matrix-table-wrapper {
+    overflow-x: auto;
+    border-radius: var(--border-radius);
+    border: 1px solid var(--border-light);
+}
+
+/* Loading overlay */
+#loadingOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(15, 23, 42, 0.7); /* translucent dark slate */
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.spinner-container {
+    text-align: center;
+    background-color: var(--bg-panel);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.loading-spinner {
+    border: 4px solid var(--border-light);
+    border-top: 4px solid var(--delphi-light-blue);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+    margin: 0 auto 16px auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+#loadingText {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+/* Footer logos */
+.app-footer {
+    background-color: var(--bg-panel);
+    border-top: 1px solid var(--border-light);
+    padding: 16px 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.footer-logos {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.footer-logo-img {
+    filter: grayscale(1) opacity(0.7);
+    transition: var(--transition);
+}
+
+.footer-logo-img:hover {
+    filter: none;
+}
+
+body.dark-theme .footer-logo-img {
+    filter: invert(1) grayscale(1) opacity(0.7);
+}
+
+body.dark-theme .footer-logo-img:hover {
+    filter: invert(1) grayscale(0) opacity(1);
+}
+
+.text-danger {
+    color: var(--warning-red);
+}
+
+.text-bold {
+    font-weight: 700;
+}
+
+.mt-2 { margin-top: 12px; }
+.mb-2 { margin-bottom: 12px; }
+.mb-3 { margin-bottom: 18px; }

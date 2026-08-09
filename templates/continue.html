@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block back_link %}
+<a href="/options" class="back-link" data-i18n="back">&lt;&lt; Back</a>
+{% endblock %}
+
+{% block content %}
+<div class="continue-container">
+    <h2 class="continue-title" data-i18n="saved_simulations">Saved Simulations</h2>
+    
+    <div class="continue-card">
+        <label for="simulationSelect" data-i18n="select_simulation">Select a simulation configuration to load:</label>
+        <select id="simulationSelect" class="select-delphi" style="width:100%; margin: 12px 0 20px 0; height:44px; padding: 0 12px; font-weight:500;">
+            <option value="" disabled selected data-i18n="choose_simulation">-- Choose simulation --</option>
+            {% for sim in simulations %}
+                <option value="{{ sim.id }}" class="simulation-option">
+                    {{ sim.nome_simulacao }} (Salvo em: {{ sim.data_simulacao }})
+                </option>
+            {% endfor %}
+        </select>
+        
+        <button id="btnLoadSimulation" class="btn btn-full-width" data-i18n="load_simulation">Load Simulation</button>
+    </div>
+</div>
+{% endblock %}

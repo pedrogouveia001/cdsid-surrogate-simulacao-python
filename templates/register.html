@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block back_link %}
+<a href="/" class="back-link" data-i18n="back">&lt;&lt; Back</a>
+{% endblock %}
+
+{% block content %}
+<div class="auth-container">
+    <h2 class="auth-title" data-i18n="register_title">Register</h2>
+    
+    {% if error %}
+        <div class="auth-error">{{ error }}</div>
+    {% endif %}
+    
+    <form action="/register" method="POST" class="auth-form">
+        <div class="form-group">
+            <label for="email" data-i18n="email">Email:</label>
+            <input type="email" id="email" name="email" class="input-delphi" required placeholder="example@email.com">
+        </div>
+        
+        <div class="form-group">
+            <label for="password" data-i18n="password">Password:</label>
+            <input type="password" id="password" name="password" class="input-delphi" required placeholder="••••••••">
+        </div>
+        
+        <div class="form-group">
+            <label for="confirm_password" data-i18n="confirm_password">Confirm Password:</label>
+            <input type="password" id="confirm_password" name="confirm_password" class="input-delphi" required placeholder="••••••••">
+        </div>
+        
+        <button type="submit" class="btn btn-full-width" data-i18n="register">Register</button>
+    </form>
+    
+    <p class="auth-footer" data-i18n="already_have_account">Already have an account? <a href="/login" data-i18n="login_now">Login now</a></p>
+</div>
+{% endblock %}

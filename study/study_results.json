@@ -1,0 +1,681 @@
+[
+    {
+        "case_id": "10A3C",
+        "num_alt": 10,
+        "num_crit": 3,
+        "mean": 1.26,
+        "std": 0.74,
+        "percentiles": {
+            "10": 0,
+            "25": 1,
+            "50": 1,
+            "75": 2,
+            "90": 2,
+            "95": 2,
+            "100": 3
+        },
+        "probabilities": {
+            "0 Questions": "16.40%",
+            "1 Question": "42.10%",
+            "2 Questions": "40.10%",
+            "3 Questions": "1.40%"
+        },
+        "screenshot": "results_10A3C.png"
+    },
+    {
+        "case_id": "20A3C",
+        "num_alt": 20,
+        "num_crit": 3,
+        "mean": 1.35,
+        "std": 0.74,
+        "percentiles": {
+            "10": 0,
+            "25": 1,
+            "50": 1,
+            "75": 2,
+            "90": 2,
+            "95": 2,
+            "100": 3
+        },
+        "probabilities": {
+            "0 Questions": "13.50%",
+            "1 Question": "40.50%",
+            "2 Questions": "43.30%",
+            "3 Questions": "2.70%"
+        },
+        "screenshot": "results_20A3C.png"
+    },
+    {
+        "case_id": "50A3C",
+        "num_alt": 50,
+        "num_crit": 3,
+        "mean": 1.4,
+        "std": 0.75,
+        "percentiles": {
+            "10": 0,
+            "25": 1,
+            "50": 2,
+            "75": 2,
+            "90": 2,
+            "95": 2,
+            "100": 3
+        },
+        "probabilities": {
+            "0 Questions": "13.70%",
+            "1 Question": "35.30%",
+            "2 Questions": "48.40%",
+            "3 Questions": "2.60%"
+        },
+        "screenshot": "results_50A3C.png"
+    },
+    {
+        "case_id": "100A3C",
+        "num_alt": 100,
+        "num_crit": 3,
+        "mean": 1.46,
+        "std": 0.77,
+        "percentiles": {
+            "10": 0,
+            "25": 1,
+            "50": 2,
+            "75": 2,
+            "90": 2,
+            "95": 2,
+            "100": 3
+        },
+        "probabilities": {
+            "0 Questions": "12.80%",
+            "1 Question": "33.10%",
+            "2 Questions": "49.60%",
+            "3 Questions": "4.50%"
+        },
+        "screenshot": "results_100A3C.png"
+    },
+    {
+        "case_id": "200A3C",
+        "num_alt": 200,
+        "num_crit": 3,
+        "mean": 1.45,
+        "std": 0.77,
+        "percentiles": {
+            "10": 0,
+            "25": 1,
+            "50": 2,
+            "75": 2,
+            "90": 2,
+            "95": 2,
+            "100": 3
+        },
+        "probabilities": {
+            "0 Questions": "12.50%",
+            "1 Question": "34.30%",
+            "2 Questions": "48.70%",
+            "3 Questions": "4.50%"
+        },
+        "screenshot": "results_200A3C.png"
+    },
+    {
+        "case_id": "10A4C",
+        "num_alt": 10,
+        "num_crit": 4,
+        "mean": 2.36,
+        "std": 1.17,
+        "percentiles": {
+            "10": 1,
+            "25": 2,
+            "50": 2,
+            "75": 3,
+            "90": 4,
+            "95": 4,
+            "100": 7
+        },
+        "probabilities": {
+            "0 Questions": "6.00%",
+            "1 Question": "13.10%",
+            "2 Questions": "38.90%",
+            "3 Questions": "28.60%",
+            "4 Questions": "8.90%",
+            "5 Questions": "3.60%",
+            "6 Questions": "0.70%",
+            "7 Questions": "0.20%"
+        },
+        "screenshot": "results_10A4C.png"
+    },
+    {
+        "case_id": "20A4C",
+        "num_alt": 20,
+        "num_crit": 4,
+        "mean": 2.53,
+        "std": 1.13,
+        "percentiles": {
+            "10": 1,
+            "25": 2,
+            "50": 2,
+            "75": 3,
+            "90": 4,
+            "95": 4,
+            "100": 8
+        },
+        "probabilities": {
+            "0 Questions": "4.30%",
+            "1 Question": "8.70%",
+            "2 Questions": "38.10%",
+            "3 Questions": "33.60%",
+            "4 Questions": "10.90%",
+            "5 Questions": "3.20%",
+            "6 Questions": "0.90%",
+            "7 Questions": "0.20%",
+            "8 Questions": "0.10%"
+        },
+        "screenshot": "results_20A4C.png"
+    },
+    {
+        "case_id": "50A4C",
+        "num_alt": 50,
+        "num_crit": 4,
+        "mean": 2.6,
+        "std": 1.15,
+        "percentiles": {
+            "10": 1,
+            "25": 2,
+            "50": 3,
+            "75": 3,
+            "90": 4,
+            "95": 4,
+            "100": 10
+        },
+        "probabilities": {
+            "0 Questions": "4.20%",
+            "1 Question": "8.10%",
+            "2 Questions": "35.00%",
+            "3 Questions": "36.10%",
+            "4 Questions": "11.70%",
+            "5 Questions": "3.90%",
+            "6 Questions": "0.60%",
+            "7 Questions": "0.20%",
+            "8 Questions": "0.10%",
+            "10 Questions": "0.10%"
+        },
+        "screenshot": "results_50A4C.png"
+    },
+    {
+        "case_id": "100A4C",
+        "num_alt": 100,
+        "num_crit": 4,
+        "mean": 2.6,
+        "std": 1.19,
+        "percentiles": {
+            "10": 1,
+            "25": 2,
+            "50": 3,
+            "75": 3,
+            "90": 4,
+            "95": 5,
+            "100": 7
+        },
+        "probabilities": {
+            "0 Questions": "4.70%",
+            "1 Question": "9.10%",
+            "2 Questions": "31.90%",
+            "3 Questions": "37.60%",
+            "4 Questions": "11.60%",
+            "5 Questions": "2.80%",
+            "6 Questions": "1.80%",
+            "7 Questions": "0.50%"
+        },
+        "screenshot": "results_100A4C.png"
+    },
+    {
+        "case_id": "200A4C",
+        "num_alt": 200,
+        "num_crit": 4,
+        "mean": 2.74,
+        "std": 1.11,
+        "percentiles": {
+            "10": 2,
+            "25": 2,
+            "50": 3,
+            "75": 3,
+            "90": 4,
+            "95": 5,
+            "100": 8
+        },
+        "probabilities": {
+            "0 Questions": "2.90%",
+            "1 Question": "7.10%",
+            "2 Questions": "29.30%",
+            "3 Questions": "41.90%",
+            "4 Questions": "13.70%",
+            "5 Questions": "3.70%",
+            "6 Questions": "0.90%",
+            "7 Questions": "0.40%",
+            "8 Questions": "0.10%"
+        },
+        "screenshot": "results_200A4C.png"
+    },
+    {
+        "case_id": "10A5C",
+        "num_alt": 10,
+        "num_crit": 5,
+        "mean": 3.36,
+        "std": 1.56,
+        "percentiles": {
+            "10": 2,
+            "25": 2,
+            "50": 3,
+            "75": 4,
+            "90": 5,
+            "95": 6,
+            "100": 12
+        },
+        "probabilities": {
+            "0 Questions": "3.50%",
+            "1 Question": "4.40%",
+            "2 Questions": "18.40%",
+            "3 Questions": "32.60%",
+            "4 Questions": "23.40%",
+            "5 Questions": "9.60%",
+            "6 Questions": "4.40%",
+            "7 Questions": "1.90%",
+            "8 Questions": "1.20%",
+            "9 Questions": "0.40%",
+            "10 Questions": "0.10%",
+            "12 Questions": "0.10%"
+        },
+        "screenshot": "results_10A5C.png"
+    },
+    {
+        "case_id": "20A5C",
+        "num_alt": 20,
+        "num_crit": 5,
+        "mean": 3.63,
+        "std": 1.54,
+        "percentiles": {
+            "10": 2,
+            "25": 3,
+            "50": 3,
+            "75": 4,
+            "90": 5,
+            "95": 6,
+            "100": 10
+        },
+        "probabilities": {
+            "0 Questions": "1.70%",
+            "1 Question": "2.90%",
+            "2 Questions": "12.80%",
+            "3 Questions": "35.20%",
+            "4 Questions": "26.90%",
+            "5 Questions": "10.80%",
+            "6 Questions": "4.70%",
+            "7 Questions": "2.40%",
+            "8 Questions": "1.20%",
+            "9 Questions": "1.00%",
+            "10 Questions": "0.40%"
+        },
+        "screenshot": "results_20A5C.png"
+    },
+    {
+        "case_id": "50A5C",
+        "num_alt": 50,
+        "num_crit": 5,
+        "mean": 3.8,
+        "std": 1.57,
+        "percentiles": {
+            "10": 2,
+            "25": 3,
+            "50": 4,
+            "75": 4,
+            "90": 6,
+            "95": 7,
+            "100": 10
+        },
+        "probabilities": {
+            "0 Questions": "1.60%",
+            "1 Question": "2.30%",
+            "2 Questions": "13.00%",
+            "3 Questions": "27.90%",
+            "4 Questions": "30.50%",
+            "5 Questions": "12.70%",
+            "6 Questions": "6.10%",
+            "7 Questions": "3.40%",
+            "8 Questions": "1.10%",
+            "9 Questions": "1.00%",
+            "10 Questions": "0.40%"
+        },
+        "screenshot": "results_50A5C.png"
+    },
+    {
+        "case_id": "100A5C",
+        "num_alt": 100,
+        "num_crit": 5,
+        "mean": 3.9,
+        "std": 1.52,
+        "percentiles": {
+            "10": 2,
+            "25": 3,
+            "50": 4,
+            "75": 5,
+            "90": 6,
+            "95": 6,
+            "100": 12
+        },
+        "probabilities": {
+            "0 Questions": "0.80%",
+            "1 Question": "2.20%",
+            "2 Questions": "8.90%",
+            "3 Questions": "29.90%",
+            "4 Questions": "32.10%",
+            "5 Questions": "14.40%",
+            "6 Questions": "7.00%",
+            "7 Questions": "2.00%",
+            "8 Questions": "1.40%",
+            "9 Questions": "0.60%",
+            "10 Questions": "0.20%",
+            "11 Questions": "0.30%",
+            "12 Questions": "0.20%"
+        },
+        "screenshot": "results_100A5C.png"
+    },
+    {
+        "case_id": "200A5C",
+        "num_alt": 200,
+        "num_crit": 5,
+        "mean": 3.93,
+        "std": 1.43,
+        "percentiles": {
+            "10": 2,
+            "25": 3,
+            "50": 4,
+            "75": 5,
+            "90": 6,
+            "95": 6,
+            "100": 10
+        },
+        "probabilities": {
+            "0 Questions": "0.50%",
+            "1 Question": "2.30%",
+            "2 Questions": "9.10%",
+            "3 Questions": "27.50%",
+            "4 Questions": "32.10%",
+            "5 Questions": "17.20%",
+            "6 Questions": "6.50%",
+            "7 Questions": "2.60%",
+            "8 Questions": "1.30%",
+            "9 Questions": "0.60%",
+            "10 Questions": "0.30%"
+        },
+        "screenshot": "results_200A5C.png"
+    },
+    {
+        "case_id": "10A6C",
+        "num_alt": 10,
+        "num_crit": 6,
+        "mean": 4.77,
+        "std": 1.8,
+        "percentiles": {
+            "10": 3,
+            "25": 4,
+            "50": 4,
+            "75": 6,
+            "90": 7,
+            "95": 8,
+            "100": 14
+        },
+        "probabilities": {
+            "0 Questions": "1.00%",
+            "2 Questions": "3.70%",
+            "3 Questions": "15.80%",
+            "4 Questions": "31.10%",
+            "5 Questions": "22.10%",
+            "6 Questions": "12.30%",
+            "7 Questions": "6.20%",
+            "8 Questions": "4.00%",
+            "9 Questions": "1.50%",
+            "10 Questions": "1.00%",
+            "11 Questions": "1.00%",
+            "12 Questions": "0.10%",
+            "13 Questions": "0.10%",
+            "14 Questions": "0.10%"
+        },
+        "screenshot": "results_10A6C.png"
+    },
+    {
+        "case_id": "20A6C",
+        "num_alt": 20,
+        "num_crit": 6,
+        "mean": 5.03,
+        "std": 1.87,
+        "percentiles": {
+            "10": 3,
+            "25": 4,
+            "50": 5,
+            "75": 6,
+            "90": 8,
+            "95": 9,
+            "100": 12
+        },
+        "probabilities": {
+            "0 Questions": "0.90%",
+            "2 Questions": "2.60%",
+            "3 Questions": "13.50%",
+            "4 Questions": "29.50%",
+            "5 Questions": "20.50%",
+            "6 Questions": "14.80%",
+            "7 Questions": "7.10%",
+            "8 Questions": "5.90%",
+            "9 Questions": "2.90%",
+            "10 Questions": "1.20%",
+            "11 Questions": "0.60%",
+            "12 Questions": "0.50%"
+        },
+        "screenshot": "results_20A6C.png"
+    },
+    {
+        "case_id": "50A6C",
+        "num_alt": 50,
+        "num_crit": 6,
+        "mean": 5.21,
+        "std": 1.84,
+        "percentiles": {
+            "10": 3,
+            "25": 4,
+            "50": 5,
+            "75": 6,
+            "90": 8,
+            "95": 9,
+            "100": 14
+        },
+        "probabilities": {
+            "0 Questions": "0.50%",
+            "2 Questions": "2.40%",
+            "3 Questions": "10.00%",
+            "4 Questions": "24.50%",
+            "5 Questions": "28.50%",
+            "6 Questions": "15.80%",
+            "7 Questions": "7.40%",
+            "8 Questions": "5.10%",
+            "9 Questions": "2.40%",
+            "10 Questions": "2.00%",
+            "11 Questions": "0.80%",
+            "12 Questions": "0.30%",
+            "13 Questions": "0.10%",
+            "14 Questions": "0.20%"
+        },
+        "screenshot": "results_50A6C.png"
+    },
+    {
+        "case_id": "100A6C",
+        "num_alt": 100,
+        "num_crit": 6,
+        "mean": 5.27,
+        "std": 1.89,
+        "percentiles": {
+            "10": 3,
+            "25": 4,
+            "50": 5,
+            "75": 6,
+            "90": 8,
+            "95": 9,
+            "100": 15
+        },
+        "probabilities": {
+            "0 Questions": "0.40%",
+            "2 Questions": "2.40%",
+            "3 Questions": "10.50%",
+            "4 Questions": "22.50%",
+            "5 Questions": "26.30%",
+            "6 Questions": "19.80%",
+            "7 Questions": "7.90%",
+            "8 Questions": "4.90%",
+            "9 Questions": "1.90%",
+            "10 Questions": "1.30%",
+            "11 Questions": "0.80%",
+            "12 Questions": "0.70%",
+            "13 Questions": "0.30%",
+            "14 Questions": "0.20%",
+            "15 Questions": "0.10%"
+        },
+        "screenshot": "results_100A6C.png"
+    },
+    {
+        "case_id": "200A6C",
+        "num_alt": 200,
+        "num_crit": 6,
+        "mean": 5.35,
+        "std": 1.78,
+        "percentiles": {
+            "10": 4,
+            "25": 4,
+            "50": 5,
+            "75": 6,
+            "90": 8,
+            "95": 9,
+            "100": 15
+        },
+        "probabilities": {
+            "0 Questions": "0.40%",
+            "2 Questions": "1.00%",
+            "3 Questions": "6.90%",
+            "4 Questions": "24.70%",
+            "5 Questions": "30.40%",
+            "6 Questions": "17.80%",
+            "7 Questions": "7.90%",
+            "8 Questions": "4.90%",
+            "9 Questions": "2.60%",
+            "10 Questions": "1.70%",
+            "11 Questions": "1.10%",
+            "12 Questions": "0.30%",
+            "13 Questions": "0.10%",
+            "14 Questions": "0.10%",
+            "15 Questions": "0.10%"
+        },
+        "screenshot": "results_200A6C.png"
+    },
+    {
+        "case_id": "10A7C",
+        "num_alt": 10,
+        "num_crit": 7,
+        "mean": 5.63,
+        "std": 2.07,
+        "percentiles": {
+            "10": 3,
+            "25": 4,
+            "50": 5,
+            "75": 7,
+            "90": 8,
+            "95": 9,
+            "100": 15
+        },
+        "probabilities": {
+            "0 Questions": "0.60%",
+            "1 Question": "0.30%",
+            "2 Questions": "2.10%",
+            "3 Questions": "8.60%",
+            "4 Questions": "18.30%",
+            "5 Questions": "22.60%",
+            "6 Questions": "20.70%",
+            "7 Questions": "10.90%",
+            "8 Questions": "6.90%",
+            "9 Questions": "4.10%",
+            "10 Questions": "2.30%",
+            "11 Questions": "1.20%",
+            "12 Questions": "0.80%",
+            "13 Questions": "0.40%",
+            "14 Questions": "0.10%",
+            "15 Questions": "0.10%"
+        },
+        "screenshot": "results_10A7C.png"
+    },
+    {
+        "case_id": "20A7C",
+        "num_alt": 20,
+        "num_crit": 7,
+        "mean": 5.95,
+        "std": 2.14,
+        "percentiles": {
+            "10": 4,
+            "25": 5,
+            "50": 6,
+            "75": 7,
+            "90": 9,
+            "95": 10,
+            "100": 16
+        },
+        "probabilities": {
+            "0 Questions": "0.40%",
+            "1 Question": "0.20%",
+            "2 Questions": "1.70%",
+            "3 Questions": "6.50%",
+            "4 Questions": "13.80%",
+            "5 Questions": "23.30%",
+            "6 Questions": "22.80%",
+            "7 Questions": "12.50%",
+            "8 Questions": "7.70%",
+            "9 Questions": "5.10%",
+            "10 Questions": "2.80%",
+            "11 Questions": "1.00%",
+            "12 Questions": "0.90%",
+            "13 Questions": "0.60%",
+            "14 Questions": "0.30%",
+            "15 Questions": "0.30%",
+            "16 Questions": "0.10%"
+        },
+        "screenshot": "results_20A7C.png"
+    },
+    {
+        "case_id": "50A7C",
+        "num_alt": 50,
+        "num_crit": 7,
+        "mean": 6.21,
+        "std": 2.05,
+        "percentiles": {
+            "10": 4,
+            "25": 5,
+            "50": 6,
+            "75": 7,
+            "90": 9,
+            "95": 10,
+            "100": 17
+        },
+        "probabilities": {
+            "0 Questions": "0.10%",
+            "2 Questions": "0.90%",
+            "3 Questions": "4.30%",
+            "4 Questions": "14.00%",
+            "5 Questions": "19.90%",
+            "6 Questions": "22.40%",
+            "7 Questions": "16.70%",
+            "8 Questions": "10.40%",
+            "9 Questions": "4.60%",
+            "10 Questions": "3.50%",
+            "11 Questions": "1.30%",
+            "12 Questions": "0.90%",
+            "13 Questions": "0.30%",
+            "14 Questions": "0.40%",
+            "15 Questions": "0.10%",
+            "16 Questions": "0.10%",
+            "17 Questions": "0.10%"
+        },
+        "screenshot": "results_50A7C.png"
+    }
+]

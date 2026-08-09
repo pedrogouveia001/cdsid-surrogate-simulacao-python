@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+
+{% block back_link %}
+<a href="/options" class="back-link" data-i18n="back">&lt;&lt; Back</a>
+{% endblock %}
+
+{% block content %}
+<div class="setup-container">
+    <input type="hidden" id="loadedSimId" value="">
+    
+    <div class="setup-card" style="max-width: 600px; margin: 0 auto;">
+        <h2 class="panel-title" data-i18n="simulation_parameters" style="text-align: center; margin-bottom: 24px;">Simulation Parameters</h2>
+        
+        <div class="form-group" style="margin-bottom: 18px;">
+            <label for="simulationName" data-i18n="simulation_name">Simulation Name:</label>
+            <input type="text" id="simulationName" class="input-delphi" value="New Monte Carlo Simulation">
+        </div>
+        
+        <div class="form-group" style="margin-bottom: 18px;">
+            <label for="numAlt" data-i18n="num_alt">Number of Alternatives:</label>
+            <input type="number" id="numAlt" class="input-delphi" min="2" value="10">
+        </div>
+        
+        <div class="form-group" style="margin-bottom: 18px;">
+            <label for="numCrit" data-i18n="num_crit">Number of Criteria:</label>
+            <select id="numCrit" class="select-delphi" style="width: 100%; height: 44px; padding: 0 12px; font-weight: 500;">
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6" selected>6</option>
+                <option value="7">7</option>
+            </select>
+            <span class="form-hint" data-i18n="crit_limit_hint" style="font-size: 11px; color: var(--text-muted); display: block; margin-top: 4px;">Note: Criteria count is limited to 7 in this web edition to guarantee fast and stable execution.</span>
+        </div>
+        
+        <div class="form-group" style="margin-bottom: 18px;">
+            <label for="numInstancias" data-i18n="num_instances">Number of Simulation Instances:</label>
+            <input type="number" id="numInstancias" class="input-delphi" min="100" step="100" value="10000">
+        </div>
+        
+        <div class="form-group" style="margin-bottom: 20px; display: none;">
+            <label data-i18n="methods_to_simulate">Simulation Models:</label>
+            <div style="display: flex; flex-direction: column; gap: 10px; margin-top: 8px;">
+                <label class="checkbox-container">
+                    <input type="checkbox" id="methodAditivo" checked>
+                    <span class="checkmark"></span>
+                    <span data-i18n="model_additive">Additive Model (ROC)</span>
+                </label>
+                <label class="checkbox-container">
+                    <input type="checkbox" id="methodSobreclassificacao" checked>
+                    <span class="checkmark"></span>
+                    <span data-i18n="model_outranking">Outranking Model (PROMETHEE)</span>
+                </label>
+            </div>
+        </div>
+        
+        <div style="display: flex; gap: 12px; margin-top: 24px;">
+            <button id="btnSaveSimulation" class="btn btn-full-width secondary" data-i18n="save_parameters" style="background-color: var(--border-light); color: var(--text-color); border: 1px solid var(--border-color);">Save Parameters</button>
+            <button id="btnRunSimulation" class="btn btn-full-width" data-i18n="run_simulation">Run Simulation</button>
+        </div>
+        
+        <div id="setupWarning" class="text-danger mt-1 text-bold" style="display:none; text-align: center; font-size:12px;"></div>
+    </div>
+</div>
+{% endblock %}

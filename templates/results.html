@@ -1,0 +1,161 @@
+{% extends "base.html" %}
+
+{% block back_link %}
+<a href="/setup" class="back-link" data-i18n="back">&lt;&lt; Back</a>
+{% endblock %}
+
+{% block content %}
+<div class="results-card">
+    <div class="results-header-row">
+        <h2 id="resSimName" class="results-title" data-i18n="simulation_results">Simulation Results</h2>
+        <div class="header-actions">
+            <button class="btn btn-delphi-action" id="btnExportPDF" data-i18n="export_pdf">Export PDF</button>
+        </div>
+    </div>
+
+    <!-- Main Grid Dashboard -->
+    <div class="results-layout" style="display: flex; flex-direction: column; gap: 24px;">
+        
+        <!-- Row 1: Metrics & Bar Chart -->
+        <div style="display: flex; gap: 24px; flex-wrap: wrap; align-items: stretch;">
+            <!-- Left Side: Summary Metrics -->
+            <div class="results-left" style="flex: 1; min-width: 340px; display: flex; flex-direction: column;">
+                <!-- Statistics Card -->
+                <div class="setup-card" style="height: 100%; margin: 0;">
+                    <h3 class="panel-title" data-i18n="simulation_parameters_short" style="border-bottom: 2px solid var(--border-light); padding-bottom: 8px; margin-bottom: 12px;">Simulation Metrics</h3>
+                    <table class="results-table">
+                        <tbody>
+                            <tr>
+                                <th data-i18n="Mean Questions" style="font-weight: 600;">Mean Questions Answered</th>
+                                <td id="meanQuestions" class="text-bold" style="text-align: right; font-size: 15px; color: var(--delphi-light-blue);">0.00</td>
+                            </tr>
+                            <tr>
+                                <th data-i18n="Standard Deviation" style="font-weight: 600;">Standard Deviation</th>
+                                <td id="stdQuestions" style="text-align: right;">0.00</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <h4 style="font-size: 13px; font-weight: 700; margin-top: 18px; margin-bottom: 8px; color: var(--text-color);" data-i18n="percentile_quartiles">Percentiles (0 to 1)</h4>
+                    <table class="results-table">
+                        <thead>
+                            <tr>
+                                <th>Percentile</th>
+                                <th style="text-align: right;">Questions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>10%</td>
+                                <td id="pct10" style="text-align: right;">0</td>
+                            </tr>
+                            <tr>
+                                <td>25% (Q1)</td>
+                                <td id="pct25" style="text-align: right;">0</td>
+                            </tr>
+                            <tr>
+                                <td>50% (Median)</td>
+                                <td id="pct50" style="text-align: right; font-weight: 700; color: var(--delphi-light-blue);">0</td>
+                            </tr>
+                            <tr>
+                                <td>75% (Q3)</td>
+                                <td id="pct75" style="text-align: right;">0</td>
+                            </tr>
+                            <tr>
+                                <td>90%</td>
+                                <td id="pct90" style="text-align: right;">0</td>
+                            </tr>
+                            <tr>
+                                <td>95%</td>
+                                <td id="pct95" style="text-align: right;">0</td>
+                            </tr>
+                            <tr>
+                                <td>100% (Max)</td>
+                                <td id="pct100" style="text-align: right; font-weight: 700;">0</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Right Side: Questions Distribution Chart -->
+            <div class="results-right" style="flex: 1.6; min-width: 450px; display: flex; flex-direction: column;">
+                <div class="setup-card" style="height: 100%; margin: 0; display: flex; flex-direction: column;">
+                    <h3 class="panel-title" data-i18n="Questions Probability" style="margin-bottom: 10px;">Questions Count Probability Distribution (%)</h3>
+                    <div class="chart-wrapper" style="flex-grow: 1; min-height: 280px; display: flex; align-items: center;">
+                        <canvas id="decompositionChart" style="width: 100%; height: 100%;"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Row 2: Probability Table & Percentile Line Chart -->
+        <div style="display: flex; gap: 24px; flex-wrap: wrap; align-items: stretch;">
+            <!-- Left Side: Probability Table Card -->
+            <div class="results-left" style="flex: 1; min-width: 340px; display: flex; flex-direction: column;">
+                <div class="setup-card" style="height: 100%; margin: 0;">
+                    <h3 class="panel-title" data-i18n="Questions Probability" style="border-bottom: 2px solid var(--border-light); padding-bottom: 8px; margin-bottom: 12px;">Convergence Probability</h3>
+                    <div style="max-height: 250px; overflow-y: auto;">
+                        <table class="results-table" id="probQuestionsTable">
+                            <thead>
+                                <tr>
+                                    <th data-i18n="Questions Count">Questions Answered</th>
+                                    <th style="text-align: right;" data-i18n="Probability">Probability (%)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Filled dynamically -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Side: Percentile Line Chart -->
+            <div class="results-right" style="flex: 1.6; min-width: 450px; display: flex; flex-direction: column;">
+                <div class="setup-card" style="height: 100%; margin: 0; display: flex; flex-direction: column;">
+                    <h3 class="panel-title" data-i18n="Percentile Curve (Questions)" style="margin-bottom: 10px;">Percentile Curve of Questions Count (0 to 1)</h3>
+                    <div class="chart-wrapper" style="flex-grow: 1; min-height: 250px; display: flex; align-items: center;">
+                        <canvas id="percentileChart" style="width: 100%; height: 100%;"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+    <!-- Trace Inspector Section -->
+    <div style="margin-top: 24px; border-top: 1px solid var(--border-light); padding-top: 20px;">
+        <div class="setup-card">
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; margin-bottom: 16px;">
+                <h3 class="panel-title" style="margin-bottom: 0;" data-i18n="Sample Elicitation Trace">Step-by-Step Simulation Trace Inspector</h3>
+                <div style="display: flex; align-items: center; gap: 8px;">
+                    <label for="traceRunSelect" style="font-size: 13px; font-weight: 600; color: var(--text-color);" data-i18n="Select Run">Select Simulation Run:</label>
+                    <select id="traceRunSelect" class="select-delphi" style="width: 130px; height: 34px; padding: 0 8px; font-size: 13px;">
+                        <!-- Filled dynamically -->
+                    </select>
+                </div>
+            </div>
+            
+            <div class="matrix-table-wrapper" style="border-radius: var(--border-radius); border: 1px solid var(--border-light);">
+                <table class="delphi-grid" id="traceTable">
+                    <thead>
+                        <tr>
+                            <th style="width: 60px;">Step</th>
+                            <th>Question Asked</th>
+                            <th style="width: 120px;">Decisor Choice</th>
+                            <th style="width: 160px;">Surviving Permutations</th>
+                            <th>Leading Alt</th>
+                            <th style="width: 150px;">Leading Alt Prob</th>
+                            <th style="width: 150px;">Average Regret</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Filled dynamically -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
